@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "socialmedias",
+  "info": {
+    "singularName": "socialmedia",
+    "pluralName": "socialmedias",
+    "displayName": "socialmedia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "instagram": {
+      "type": "string",
+      "required": true
+    },
+    "facebook": {
+      "type": "string",
+      "required": true
+    },
+    "whatsapp": {
+      "type": "string",
+      "required": true
+    },
+    "twitter": {
+      "type": "string",
+      "required": true
+    },
+    "tiktok": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
