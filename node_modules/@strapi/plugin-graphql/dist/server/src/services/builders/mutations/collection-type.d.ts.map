@@ -1,0 +1,1 @@
+{"version":3,"file":"collection-type.d.ts","sourceRoot":"","sources":["../../../../../../server/src/services/builders/mutations/collection-type.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,KAAK,KAAK,MAAM,OAAO,CAAC;AACpC,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,eAAe,CAAC;AAC5C,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,aAAa,CAAC;qCAEf,OAAO;8CAgJW,OAAO,cAAc;;AAhJnE,wBAkME"}

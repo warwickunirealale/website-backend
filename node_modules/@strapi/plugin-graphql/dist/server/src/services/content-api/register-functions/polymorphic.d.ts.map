@@ -1,0 +1,1 @@
+{"version":3,"file":"polymorphic.d.ts","sourceRoot":"","sources":["../../../../../../server/src/services/content-api/register-functions/polymorphic.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,eAAe,CAAC;AAC5C,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,aAAa,CAAC;AAE3C,QAAA,MAAM,8BAA8B,gBAAiB,OAAO,GAAG,wBAAwB,OAAO,SA8D7F,CAAC;AAEF,OAAO,EAAE,8BAA8B,EAAE,CAAC"}
