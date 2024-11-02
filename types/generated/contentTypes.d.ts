@@ -802,7 +802,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     body: Attribute.Blocks & Attribute.Required;
-    cover: Attribute.Media<'images'> & Attribute.Required;
+    image: Attribute.Media<'images'> & Attribute.Required;
     categories: Attribute.Relation<
       'api::article.article',
       'manyToMany',
@@ -819,6 +819,37 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiBlogMainpageBlogMainpage extends Schema.SingleType {
+  collectionName: 'blog_mainpages';
+  info: {
+    singularName: 'blog-mainpage';
+    pluralName: 'blog-mainpages';
+    displayName: 'Blog Mainpage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-mainpage.blog-mainpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-mainpage.blog-mainpage',
       'oneToOne',
       'admin::user'
     > &
@@ -948,6 +979,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
+      'api::blog-mainpage.blog-mainpage': ApiBlogMainpageBlogMainpage;
       'api::category.category': ApiCategoryCategory;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::socialmedia.socialmedia': ApiSocialmediaSocialmedia;

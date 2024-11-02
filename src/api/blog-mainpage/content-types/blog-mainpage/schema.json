@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_mainpages",
+  "info": {
+    "singularName": "blog-mainpage",
+    "pluralName": "blog-mainpages",
+    "displayName": "Blog Mainpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "splash_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
