@@ -4,7 +4,8 @@
   "info": {
     "singularName": "homepage",
     "pluralName": "homepages",
-    "displayName": "Homepage"
+    "displayName": "Homepage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "splash_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
+      ]
+    },
+    "about": {
+      "displayName": "Homepage About",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage-about.homepage-about",
       "required": true
     }
   }
