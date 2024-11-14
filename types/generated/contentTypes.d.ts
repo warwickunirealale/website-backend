@@ -788,6 +788,42 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsPageAboutUsPage extends Schema.SingleType {
+  collectionName: 'about_us_pages';
+  info: {
+    singularName: 'about-us-page';
+    pluralName: 'about-us-pages';
+    displayName: 'AboutUsPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    aboutus_text: Attribute.Component<
+      'aboutus-who-what-why.about-us-who-what-why',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us-page.about-us-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us-page.about-us-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Schema.CollectionType {
   collectionName: 'articles';
   info: {
@@ -963,6 +999,47 @@ export interface ApiSocialmediaSocialmedia extends Schema.SingleType {
   };
 }
 
+export interface ApiSponsersPageSponsersPage extends Schema.SingleType {
+  collectionName: 'sponsers_pages';
+  info: {
+    singularName: 'sponsers-page';
+    pluralName: 'sponsers-pages';
+    displayName: 'Sponsers Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    flagship_sponsers: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.Required;
+    sponser_logos: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.Required;
+    flagships: Attribute.Component<'flagship-sponsers.flagship-sponsers', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sponsers-page.sponsers-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sponsers-page.sponsers-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -981,11 +1058,13 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
       'api::article.article': ApiArticleArticle;
       'api::blog-mainpage.blog-mainpage': ApiBlogMainpageBlogMainpage;
       'api::category.category': ApiCategoryCategory;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::socialmedia.socialmedia': ApiSocialmediaSocialmedia;
+      'api::sponsers-page.sponsers-page': ApiSponsersPageSponsersPage;
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "AboutUsPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "splash_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "aboutus_text": {
+      "displayName": "AboutUs Who What Why",
+      "type": "component",
+      "repeatable": true,
+      "component": "aboutus-who-what-why.about-us-who-what-why"
+    }
+  }
+}

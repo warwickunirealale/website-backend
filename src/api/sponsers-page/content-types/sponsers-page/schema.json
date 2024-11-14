@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "sponsers_pages",
+  "info": {
+    "singularName": "sponsers-page",
+    "pluralName": "sponsers-pages",
+    "displayName": "Sponsers Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "flagship_sponsers": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sponser_logos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "flagships": {
+      "displayName": "Flagship Sponsers",
+      "type": "component",
+      "repeatable": true,
+      "component": "flagship-sponsers.flagship-sponsers"
+    }
+  }
+}

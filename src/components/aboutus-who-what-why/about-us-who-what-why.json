@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_aboutus_who_what_why_about_us_who_what_whies",
+  "info": {
+    "displayName": "AboutUs Who What Why",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

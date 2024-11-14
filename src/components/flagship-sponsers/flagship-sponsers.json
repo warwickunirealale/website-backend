@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_flagship_sponsers_flagship_sponsers",
+  "info": {
+    "displayName": "Flagship Sponsers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
