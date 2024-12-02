@@ -928,6 +928,40 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiFestivalPageFestivalPage extends Schema.SingleType {
+  collectionName: 'festival_pages';
+  info: {
+    singularName: 'festival-page';
+    pluralName: 'festival-pages';
+    displayName: 'Festival Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    year_count: Attribute.Integer & Attribute.Required;
+    details: Attribute.Component<'festival-details.festival-details'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::festival-page.festival-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::festival-page.festival-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -1011,17 +1045,13 @@ export interface ApiSponsersPageSponsersPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    flagship_sponsers: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
-      Attribute.Required;
-    sponser_logos: Attribute.Media<
+    splash_image: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
       Attribute.Required;
     flagships: Attribute.Component<'flagship-sponsers.flagship-sponsers', true>;
+    sponsers: Attribute.Component<'normal-sponsers.sponsers', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1062,6 +1092,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::blog-mainpage.blog-mainpage': ApiBlogMainpageBlogMainpage;
       'api::category.category': ApiCategoryCategory;
+      'api::festival-page.festival-page': ApiFestivalPageFestivalPage;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::socialmedia.socialmedia': ApiSocialmediaSocialmedia;
       'api::sponsers-page.sponsers-page': ApiSponsersPageSponsersPage;

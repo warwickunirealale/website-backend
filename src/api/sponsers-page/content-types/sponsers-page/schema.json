@@ -12,18 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "flagship_sponsers": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "sponser_logos": {
+    "splash_image": {
       "type": "media",
       "multiple": true,
       "required": true,
@@ -39,6 +28,12 @@
       "type": "component",
       "repeatable": true,
       "component": "flagship-sponsers.flagship-sponsers"
+    },
+    "sponsers": {
+      "displayName": "sponsers",
+      "type": "component",
+      "repeatable": true,
+      "component": "normal-sponsers.sponsers"
     }
   }
 }

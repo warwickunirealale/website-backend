@@ -7,17 +7,20 @@
   "options": {},
   "attributes": {
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "link": {
+      "type": "string"
+    },
+    "name": {
       "type": "string"
     }
   }

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_festival_details_festival_details",
+  "info": {
+    "displayName": "Festival Details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "link_text": {
+      "type": "string"
+    }
+  }
+}

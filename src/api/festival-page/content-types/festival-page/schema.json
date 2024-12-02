@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "festival_pages",
+  "info": {
+    "singularName": "festival-page",
+    "pluralName": "festival-pages",
+    "displayName": "Festival Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "splash_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "year_count": {
+      "type": "integer",
+      "required": true
+    },
+    "details": {
+      "displayName": "Festival Details",
+      "type": "component",
+      "repeatable": false,
+      "component": "festival-details.festival-details"
+    }
+  }
+}
