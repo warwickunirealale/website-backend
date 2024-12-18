@@ -30,7 +30,7 @@
     "details": {
       "displayName": "Festival Details",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "festival-details.festival-details"
     }
   }

@@ -928,6 +928,37 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactPageContactPage extends Schema.SingleType {
+  collectionName: 'contact_pages';
+  info: {
+    singularName: 'contact-page';
+    pluralName: 'contact-pages';
+    displayName: 'Contact Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFestivalPageFestivalPage extends Schema.SingleType {
   collectionName: 'festival_pages';
   info: {
@@ -943,7 +974,7 @@ export interface ApiFestivalPageFestivalPage extends Schema.SingleType {
     splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     year_count: Attribute.Integer & Attribute.Required;
-    details: Attribute.Component<'festival-details.festival-details'>;
+    details: Attribute.Component<'festival-details.festival-details', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1045,10 +1076,7 @@ export interface ApiSponsersPageSponsersPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    splash_image: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
+    splash_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     flagships: Attribute.Component<'flagship-sponsers.flagship-sponsers', true>;
     sponsers: Attribute.Component<'normal-sponsers.sponsers', true>;
@@ -1092,6 +1120,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::blog-mainpage.blog-mainpage': ApiBlogMainpageBlogMainpage;
       'api::category.category': ApiCategoryCategory;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::festival-page.festival-page': ApiFestivalPageFestivalPage;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::socialmedia.socialmedia': ApiSocialmediaSocialmedia;

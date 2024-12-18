@@ -7,8 +7,8 @@ export interface NormalSponsersSponsers extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    link: Attribute.String & Attribute.Required;
+    title: Attribute.String;
+    link: Attribute.String;
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
   };
