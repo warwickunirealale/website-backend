@@ -3104,6 +3104,15 @@ atob@^2.1.2:
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+axios@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.7.9.tgz"
+  integrity sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 axios@1.6.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/axios/-/axios-1.6.0.tgz"
