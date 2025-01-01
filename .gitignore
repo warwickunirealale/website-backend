@@ -1,6 +1,6 @@
-############################
-# OS X
-############################
+# ############################
+# # OS X
+# ############################
 
 .DS_Store
 .AppleDouble
@@ -11,16 +11,16 @@ Icon
 ._*
 
 
-############################
-# Linux
-############################
+# ############################
+# # Linux
+# ############################
 
-*~
+# *~
 
 
-############################
-# Windows
-############################
+# ############################
+# # Windows
+# ############################
 
 Thumbs.db
 ehthumbs.db
@@ -32,84 +32,84 @@ $RECYCLE.BIN/
 *.msp
 
 
-############################
-# Packages
-############################
+# ############################
+# # Packages
+# ############################
 
-*.7z
-*.csv
-*.dat
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.seed
-*.so
-*.swo
-*.swp
-*.swn
-*.swm
-*.out
-*.pid
-
-
-############################
-# Logs and databases
-############################
-
-.tmp
-*.log
-*.sql
-*.sqlite
-*.sqlite3
+# *.7z
+# *.csv
+# *.dat
+# *.dmg
+# *.gz
+# *.iso
+# *.jar
+# *.rar
+# *.tar
+# *.zip
+# *.com
+# *.class
+# *.dll
+# *.exe
+# *.o
+# *.seed
+# *.so
+# *.swo
+# *.swp
+# *.swn
+# *.swm
+# *.out
+# *.pid
 
 
-############################
-# Misc.
-############################
+# ############################
+# # Logs and databases
+# ############################
 
-*#
-ssl
-.idea
-nbproject
-public/uploads/*
-!public/uploads/.gitkeep
+# .tmp
+# *.log
+# *.sql
+# *.sqlite
+# *.sqlite3
 
-############################
-# Node.js
-############################
 
-lib-cov
-lcov.info
-pids
-logs
-results
-node_modules
-.node_history
+# ############################
+# # Misc.
+# ############################
 
-############################
-# Tests
-############################
+# *#
+# ssl
+# .idea
+# nbproject
+# public/uploads/*
+# !public/uploads/.gitkeep
 
-coverage
+# ############################
+# # Node.js
+# ############################
 
-############################
-# Strapi
-############################
+# lib-cov
+# lcov.info
+# pids
+# logs
+# results
+# node_modules
+# .node_history
 
-.env
-license.txt
-exports
-.strapi
-dist
-build
-.strapi-updater.json
-.strapi-cloud.json
+# ############################
+# # Tests
+# ############################
+
+# coverage
+
+# ############################
+# # Strapi
+# ############################
+
+# .env
+# license.txt
+# exports
+# .strapi
+# dist
+# build
+# .strapi-updater.json
+# .strapi-cloud.json
