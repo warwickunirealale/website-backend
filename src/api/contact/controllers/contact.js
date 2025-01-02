@@ -11,7 +11,7 @@ module.exports = {
             null,
                 {
                     params: {
-                        secret: process.env.RECAPTCHA_SECRET_KEY_DEVELOP,
+                        secret: process.env.RECAPTCHA_SECRET_KEY_PROD,
                         response: recaptcha
                     }
                 }
