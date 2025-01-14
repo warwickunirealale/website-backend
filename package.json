@@ -19,6 +19,7 @@
     "@strapi/strapi": "4.25.6",
     "axios": "^1.7.9",
     "better-sqlite3": "8.6.0",
+    "mysql2": "^2.3.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",

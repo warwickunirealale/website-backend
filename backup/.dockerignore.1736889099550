@@ -1,0 +1,7 @@
+.cache/
+.git/
+build/
+.env
+data/
+backup/
+node_modules/
