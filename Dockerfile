@@ -19,6 +19,9 @@ RUN chown -R node:node /opt/app/public/uploads
 RUN chown -R node:node /opt/app/config
 RUN chown -R node:node /opt/app/src
 
+USER root
+RUN chown -R node:node /opt/app
+USER node
 
 USER node
 RUN ["yarn", "build"]
