@@ -4,17 +4,18 @@ RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev l
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/
+WORKDIR /opt/app
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
 RUN yarn add mysql2
 
-WORKDIR /opt/app
-COPY . .
 ENV PATH /opt/node_modules/.bin:$PATH
 RUN chown -R node:node /opt/app
 RUN chmod 755 /opt/app/public
+RUN mkdir -p /opt/app/public/uploads
+RUN chown -R node:node /opt/app/public
+
 USER node
 RUN ["yarn", "build"]
 EXPOSE 1337
