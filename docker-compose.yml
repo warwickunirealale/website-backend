@@ -6,7 +6,6 @@ services:
     image: strapi:latest
     restart: unless-stopped
     env_file: .env
-    command: sh -c "sleep 3600 && npm run start"
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB
