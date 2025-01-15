@@ -13,10 +13,13 @@ COPY . .
 RUN yarn build
 
 # Creating final production image
-FROM node:16-alpine
+FROM node:18-alpine
 RUN apk add --no-cache vips-dev
+RUN apk add --no-cache vips-dev mysql-client
 ARG NODE_ENV=production
+ARG PORT=8080
 ENV NODE_ENV=${NODE_ENV}
+ENV PORT=${PORT}
 WORKDIR /opt/
 COPY --from=build /opt/node_modules ./node_modules
 WORKDIR /opt/app
@@ -25,5 +28,5 @@ ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN chown -R node:node /opt/app
 USER node
-EXPOSE 1337
+EXPOSE 8080
 CMD ["yarn", "start"]
