@@ -15,6 +15,10 @@ RUN chown -R node:node /opt/app
 RUN chmod 755 /opt/app/public
 RUN mkdir -p /opt/app/public/uploads
 RUN chown -R node:node /opt/app/public
+RUN chown -R node:node /opt/app/public/uploads
+RUN chown -R node:node /opt/app/config
+RUN chown -R node:node /opt/app/src
+
 
 USER node
 RUN ["yarn", "build"]
