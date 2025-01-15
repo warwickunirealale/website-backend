@@ -13,7 +13,7 @@ RUN yarn add mysql2
 WORKDIR /opt/app
 COPY . .
 ENV PATH /opt/node_modules/.bin:$PATH
-RUN chown -R node:node /opt/app
+RUN chown 777 node:node /opt/app
 USER node
 RUN ["yarn", "build"]
 EXPOSE 1337
