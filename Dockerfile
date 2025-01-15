@@ -8,7 +8,7 @@ WORKDIR /opt/
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
-RUN yarn config set network-timeout 600000 -g && yarn install
+RUN yarn add mysql2
 
 WORKDIR /opt/app
 COPY . .
@@ -17,5 +17,4 @@ RUN chown -R node:node /opt/app
 USER node
 RUN ["yarn", "build"]
 EXPOSE 1337
-RUN npm install mysql2
 CMD ["yarn", "develop"]
