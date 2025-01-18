@@ -1,0 +1,6 @@
+{
+    "max-concurrent-downloads": 50,
+    "max-concurrent-uploads": 50,
+    "max-download-attempts": 10,
+    "http2-max-header-list-size": 512000
+}
