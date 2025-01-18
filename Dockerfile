@@ -30,4 +30,10 @@ ENV PATH /opt/node_modules/.bin:$PATH
 RUN chown -R node:node /opt/app
 USER node
 EXPOSE 8080
-CMD ["sh", "-c", "node --version && yarn start"]
+
+# Add wait-for-it script
+ADD <https://github.com/vishnubob/wait-for-it/raw/master/wait-for-it.sh> /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
+# Modify the CMD to use wait-for-it
+CMD ["/bin/sh", "-c", "/wait-for-it.sh strapiDB:3306 --timeout=30 -- yarn start"]
