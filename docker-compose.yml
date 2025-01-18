@@ -34,8 +34,6 @@ services:
       - ./public/uploads:/opt/app/public/uploads
     ports:
       - '8080:8080'
-    entrypoint: ["/opt/app/entrypoint.sh"]
-    command: ["yarn", "start"]
     networks:
       - strapi
     depends_on:
