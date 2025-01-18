@@ -2,7 +2,6 @@ services:
   strapi:
     container_name: strapi
     build: .
-    image: strapi:latest
     restart: unless-stopped
     env_file: .env
     environment:
@@ -45,7 +44,7 @@ services:
     platform: linux/amd64 #for platform error on Apple M1 chips
     restart: unless-stopped
     env_file: .env
-    image: mysql:9.1
+    image: mysql:8.0
     environment:
       MYSQL_USER: ${DATABASE_USERNAME}
       MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
@@ -69,7 +68,7 @@ services:
     image: adminer
     restart: unless-stopped
     ports:
-      - '9090:1337'
+      - '9090:8080'
     environment:
       - ADMINER_DEFAULT_SERVER=strapiDB
     networks:
