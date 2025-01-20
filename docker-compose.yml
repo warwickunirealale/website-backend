@@ -1,7 +1,7 @@
 services:
   strapi:
     container_name: strapi
-    build: .
+    image: ghcr.io/warwickunirealale/website-backend/strapi:latest
     restart: unless-stopped
     env_file: .env
     environment:
