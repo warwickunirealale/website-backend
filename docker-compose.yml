@@ -3,7 +3,7 @@ services:
     container_name: strapi
     image: ghcr.io/warwickunirealale/website-backend/strapi:latest
     restart: unless-stopped
-    env_file: .env
+    env_file: stack.env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB
@@ -43,7 +43,7 @@ services:
     container_name: strapiDB
     platform: linux/amd64 #for platform error on Apple M1 chips
     restart: unless-stopped
-    env_file: .env
+    env_file: stack.env
     image: mysql:8.0
     environment:
       MYSQL_USER: ${DATABASE_USERNAME}
@@ -54,8 +54,6 @@ services:
     volumes:
       - strapi-data:/var/lib/mysql
       #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
-    ports:
-      - '3306:3306'
     healthcheck:
        test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
        timeout: 20s
