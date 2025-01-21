@@ -92,7 +92,7 @@ public/uploads/*
 # pids
 # logs
 # results
-node_modules
+# node_modules
 # .node_history
 
 # ############################
