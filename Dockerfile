@@ -18,7 +18,7 @@ FROM node:${NODE_VERSION}-alpine
 RUN apk add --no-cache vips-dev
 RUN apk add --no-cache vips-dev mysql-client
 ARG NODE_ENV=production
-ARG PORT=8080
+ARG PORT= ${PORT}
 ENV NODE_ENV=${NODE_ENV}
 ENV PORT=${PORT}
 WORKDIR /opt/
@@ -29,5 +29,5 @@ ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN chown -R node:node /opt/app
 USER node
-EXPOSE 8080
+EXPOSE ${PORT}
 CMD ["sh", "-c", "node --version && yarn start"]
