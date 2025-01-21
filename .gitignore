@@ -92,7 +92,7 @@ public/uploads/*
 # pids
 # logs
 # results
-# node_modules
+node_modules
 # .node_history
 
 # ############################
@@ -108,8 +108,8 @@ public/uploads/*
 .env
 license.txt
 exports
-.strapi
+# .strapi
 dist
 build
-.strapi-updater.json
-.strapi-cloud.json
+# .strapi-updater.json
+# .strapi-cloud.json
