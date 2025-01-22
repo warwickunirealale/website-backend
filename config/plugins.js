@@ -1,5 +1,18 @@
 module.exports = ({ env }) => ({
-    email: {
+  graphql: {
+        config: {
+              endpoint: '/graphql',
+              shadowCRUD: true,
+              playgroundAlways: true,
+              depthLimit: 10,
+              amountLimit: 100,
+              apolloServer: {
+                    tracing: false,
+                    introspection: true,
+              },
+        },
+  },
+  email: {
         config: {
             provider: 'nodemailer',
             providerOptions: {
@@ -15,18 +28,6 @@ module.exports = ({ env }) => ({
             settings: {
                 defaultFrom: env('SMTP_USER'), // Default sender email
                 defaultReplyTo: env('SMTP_USER'), // Default reply-to email
-            },
-        },
-    },
-    graphql: {
-        config: {
-            endpoint: '/graphql',
-            shadowCRUD: true,
-            landingPage: false,
-            depthLimit: 7,
-            amountLimit: 100,
-            apolloServer: {
-                tracing: false,
             },
         },
     },
