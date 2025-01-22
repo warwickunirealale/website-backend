@@ -21,7 +21,7 @@ module.exports = ({ env }) => ({
     graphql: {
         config: {
             apolloServer: {
-                tracing: false,
+                tracing: true,
             },
         },
     },
